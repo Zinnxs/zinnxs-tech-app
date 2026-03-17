@@ -57,7 +57,7 @@ const uid = () => `${Date.now().toString(36)}${Math.random().toString(36).slice(
 
 const SEED = {
   podcasts: [
-    
+    { id:"pod1", title:"Ponto de Fuga", description:"Sobre mim...", cover_url:"", category:"Diário Pessoal", language:"pt-BR", author:"Leonardo José", website:"", status:"active" }
   ],
   episodes: [
     
@@ -83,7 +83,7 @@ const SK = {
   user:"ps_v2_user"
 };
 
-const SEED_USER = { id:"usr1", email:"carlos@podstudio.app", full_name:"Carlos Mendes", role:"admin" };
+const SEED_USER = { id:"usr1", email:"leonardojoseoliv@gmail.com", full_name:"Leonardo José", role:"admin" };
 
 async function loadAll() {
   const r = {};
