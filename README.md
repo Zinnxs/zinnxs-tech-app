@@ -1,0 +1,1 @@
+# zinnxs-tech-app
