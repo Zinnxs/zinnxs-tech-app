@@ -57,49 +57,22 @@ const uid = () => `${Date.now().toString(36)}${Math.random().toString(36).slice(
 
 const SEED = {
   podcasts: [
-    { id:"pod1", title:"Tech Deep Dive", description:"Conversas profundas sobre tecnologia, inovação e o futuro digital. Exploramos tendências, startups e os protagonistas que moldam o amanhã.", cover_url:"", category:"Tecnologia", language:"pt-BR", author:"Carlos Mendes", website:"https://techdeepdive.fm", status:"active" },
-    { id:"pod2", title:"Negócios do Futuro", description:"Estratégias práticas para empreendedores da era digital. Do bootstrapping ao IPO.", cover_url:"", category:"Negócios", language:"pt-BR", author:"Carlos Mendes", website:"", status:"active" },
-    { id:"pod3", title:"Mente e Código", description:"A interseção fascinante entre psicologia, neurociência e desenvolvimento de software.", cover_url:"", category:"Educação", language:"pt-BR", author:"Carlos Mendes", website:"", status:"paused" },
+    
   ],
   episodes: [
-    { id:"ep1", podcast_id:"pod1", title:"O Futuro da IA Generativa", description:"Como ferramentas de IA estão revolucionando criação de conteúdo e transformando indústrias inteiras.", episode_number:8, season_number:2, status:"published", audio_url:"", duration_seconds:2778, publish_date:"2025-01-10", show_notes:"Episódio especial com pesquisadora do DeepMind. Links mencionados: arxiv.org/...", tags:["ia","tech","criatividade","futuro"] },
-    { id:"ep2", podcast_id:"pod1", title:"Construindo Audiência do Zero", description:"Estratégias reais e comprovadas para crescer um podcast sem investimento inicial.", episode_number:9, season_number:2, status:"editing", audio_url:"", duration_seconds:0, publish_date:"", show_notes:"", tags:["marketing","crescimento","audiência"] },
-    { id:"ep3", podcast_id:"pod1", title:"Monetização em 2025: Guia Completo", description:"Todos os modelos de receita que funcionam para podcasters brasileiros em 2025.", episode_number:10, season_number:2, status:"recording", audio_url:"", duration_seconds:0, publish_date:"2025-02-28", show_notes:"", tags:["monetização","negócios","patrocínio"] },
-    { id:"ep4", podcast_id:"pod2", title:"Startups que Mudaram o Brasil", description:"Histórias de empreendedores brasileiros que construíram unicórnios do zero.", episode_number:1, season_number:1, status:"draft", audio_url:"", duration_seconds:0, publish_date:"", show_notes:"", tags:["startups","brasil","empreendedorismo"] },
-    { id:"ep5", podcast_id:"pod1", title:"Setup de Podcast sem Gastar Muito", description:"Os melhores equipamentos para começar com menos de R$1.000.", episode_number:7, season_number:2, status:"published", audio_url:"", duration_seconds:2340, publish_date:"2024-12-20", show_notes:"Lista de equipamentos na descrição.", tags:["equipamento","setup","iniciantes"] },
-    { id:"ep6", podcast_id:"pod3", title:"O Código do Flow", description:"Como programadores entram em estado de hiperfoco e o que a neurociência diz sobre isso.", episode_number:1, season_number:1, status:"draft", audio_url:"", duration_seconds:0, publish_date:"", show_notes:"", tags:["psicologia","foco","produtividade"] },
+    
   ],
   guests: [
-    { id:"g1", name:"Sarah Chen", email:"sarah.chen@deepmind.com", bio:"Pesquisadora Sênior de IA no DeepMind. PhD em Machine Learning pela Stanford. Autora de 40+ artigos sobre modelos de linguagem.", photo_url:"", social_links:{ instagram:"sarahchen_ai", twitter:"sarahchen_ai", linkedin:"sarahchen", website:"https://sarahchen.io" }, episode_ids:["ep1"], status:"recorded" },
-    { id:"g2", name:"Marcus Oliveira", email:"marcus@marcusoliveira.com.br", bio:"Fundador e ex-CEO da Loja5 (vendida em 2023). Investidor anjo em 15 startups. Atualmente construindo seu 4º negócio.", photo_url:"", social_links:{ instagram:"marcusoliveira", twitter:"marcusoliveira", linkedin:"marcusoliveira", website:"https://marcus.com.br" }, episode_ids:[], status:"confirmed" },
-    { id:"g3", name:"Ana Paula Ramos", email:"ana@apramosconsultoria.com", bio:"Especialista em marketing digital e criação de audiência para podcasts. Consultora de 50+ podcasters.", photo_url:"", social_links:{ instagram:"anaramos_mkt", twitter:"", linkedin:"anaramos", website:"" }, episode_ids:["ep2"], status:"invited" },
-    { id:"g4", name:"Dr. Felipe Borges", email:"fborges@usp.br", bio:"Neurocientista na USP. Pesquisa o impacto da tecnologia no cérebro humano. Autor de 'A Mente Digital'.", photo_url:"", social_links:{ instagram:"", twitter:"drfborges", linkedin:"felipeborges", website:"" }, episode_ids:["ep6"], status:"confirmed" },
+    
   ],
   scripts: [
-    { id:"sc1", episode_id:"ep1", title:"Roteiro — IA Generativa (Ep 8 T2)", content:"", blocks:[
-      { id:"b1", type:"intro", title:"Abertura Impactante", content:"[SOM: trilha de abertura — 5s]\n\nOlá! Bem-vindos ao Tech Deep Dive, o podcast que vai fundo nas tendências que estão moldando nosso futuro digital. Eu sou Carlos Mendes, e hoje temos um episódio que você não vai querer perder.\n\nNosso tema: Inteligência Artificial Generativa — e o que ela significa para criadores de conteúdo, desenvolvedores e para todos nós.\n\nMinha convidada especial viajou do Reino Unido para gravar este episódio: Sarah Chen, pesquisadora sênior no DeepMind e uma das mentes mais brilhantes na área de LLMs. Sarah, seja muito bem-vinda!", duration_min:3 },
-      { id:"b2", type:"interview", title:"Bloco 1 — O Estado da Arte", content:"P: Sarah, para quem está chegando agora ao mundo da IA generativa — onde estamos hoje? O que mudou nos últimos 2 anos?\nR: [aguardar]\n\nP: Você trabalha no DeepMind, que é um dos laboratórios mais avançados do mundo. Qual é o problema que mais te mantém acordada à noite?\nR: [aguardar]\n\nP: Muita gente tem medo que a IA substitua empregos criativos. O que você diria a um podcaster, escritor ou designer preocupado com isso?\nR: [aguardar]", duration_min:18 },
-      { id:"b3", type:"segment", title:"Bloco 2 — Casos Práticos", content:"Agora vou compartilhar 3 aplicações reais que eu mesmo testei:\n\n1. ROTEIRIZAÇÃO AUTOMÁTICA\n   - Ferramenta: Claude / ChatGPT\n   - Resultado: 60% de economia de tempo\n   - Cuidado: sempre revisar e personalizar\n\n2. EDIÇÃO DE ÁUDIO COM IA\n   - Ferramenta: Adobe Podcast AI, Descript\n   - Remove ruídos, equaliza automaticamente\n   - Resultado: qualidade de estúdio profissional\n\n3. DISTRIBUIÇÃO PERSONALIZADA\n   - IA analisa o perfil de cada ouvinte\n   - Sugere episódios com base no histórico\n   - Aumenta tempo médio de escuta em 34%", duration_min:12 },
-      { id:"b4", type:"ad", title:"Patrocínio — [Sponsor]", content:"[PAUSA PARA PATROCÍNIO]\n\nEste episódio foi patrocinado por [NOME DO SPONSOR]. \n[Leia o texto do patrocínio aqui]\nUse o código TECHDEEP para obter [BENEFÍCIO].", duration_min:1 },
-      { id:"b5", type:"interview", title:"Bloco 3 — O Futuro", content:"P: Sarah, nos próximos 5 anos — o que você acha que vai ser diferente no nosso trabalho por causa da IA?\nR: [aguardar]\n\nP: Tem alguma linha que a IA não deve cruzar? Onde está o limite ético?\nR: [aguardar]\n\nP: Para quem quer começar a usar IA hoje — qual é o primeiro passo?\nR: [aguardar]", duration_min:15 },
-      { id:"b6", type:"outro", title:"Encerramento", content:"[MÚSICA SUAVE AO FUNDO]\n\nQue conversa incrível! Sarahchen.io para ver mais do trabalho da Sarah, e no description box você encontra todos os links mencionados.\n\nSe este episódio te ajudou de alguma forma, por favor deixe uma avaliação de 5 estrelas no Spotify ou Apple Podcasts — isso ajuda MUITO o podcast a crescer.\n\nNa semana que vem: [PRÓXIMO EP TEASER]. Até lá!\n\n[SOM: trilha de encerramento]", duration_min:2 },
-    ], status:"approved" },
-    { id:"sc2", episode_id:"ep2", title:"Roteiro — Audiência do Zero (Ep 9 T2)", content:"", blocks:[
-      { id:"b7", type:"intro", title:"Gancho de Abertura", content:"Se você tivesse que começar um podcast hoje do zero, sem seguidores, sem orçamento, sem rede de contatos — como você chegaria a 10.000 ouvintes? É exatamente isso que vamos descobrir hoje.", duration_min:2 },
-      { id:"b8", type:"segment", title:"Os 5 Pilares", content:"1. Nicho ultra-específico\n2. Consistência acima de perfeição\n3. SEO para podcasts\n4. Colaborações estratégicas\n5. Comunidade antes do produto", duration_min:20 },
-      { id:"b9", type:"outro", title:"CTA Final", content:"Pega papel e caneta e escreve agora: qual é o nicho ultra-específico do seu podcast? Compartilha nos comentários. Até semana que vem!", duration_min:2 },
-    ], status:"review" },
+    
   ],
   audioTracks: [
-    { id:"at1", episode_id:"ep1", label:"Host — Principal (stereo)", file_url:"", file_size_mb:45.2, duration_seconds:2778, format:"mp3", track_type:"final", participant:"Carlos Mendes", upload_status:"done" },
-    { id:"at2", episode_id:"ep1", label:"Guest — Sarah Chen", file_url:"", file_size_mb:44.1, duration_seconds:2760, format:"mp3", track_type:"processed", participant:"Sarah Chen", upload_status:"done" },
-    { id:"at3", episode_id:"ep5", label:"Host — Gravação Solo", file_url:"", file_size_mb:38.7, duration_seconds:2340, format:"mp3", track_type:"final", participant:"Carlos Mendes", upload_status:"done" },
+    
   ],
   sessions: [
-    { id:"ses1", episode_id:"ep3", title:"Gravação Ep. 10 — Monetização", date:"2025-02-15", time:"14:00", duration_min:90, guest_ids:[], notes:"Preparar planilha comparativa dos modelos de monetização. Verificar dados atualizados do mercado brasileiro.", status:"scheduled", location:"Estúdio Virtual (Riverside)" },
-    { id:"ses2", episode_id:"ep2", title:"Entrevista — Ana Paula Ramos", date:"2025-02-18", time:"10:00", duration_min:60, guest_ids:["g3"], notes:"Confirmar disponibilidade com 48h de antecedência. Enviar roteiro por e-mail.", status:"confirmed", location:"Zoom (link na descrição)" },
-    { id:"ses3", episode_id:"ep4", title:"Gravação Solo — Startups Brasil", date:"2025-02-22", time:"16:00", duration_min:120, guest_ids:["g2"], notes:"Marcus confirmou. Preparar estudo de casos das últimas 3 rodadas de investimento.", status:"scheduled", location:"Home Studio" },
-    { id:"ses4", episode_id:"ep6", title:"Entrevista — Dr. Felipe Borges", date:"2025-03-05", time:"09:00", duration_min:75, guest_ids:["g4"], notes:"Episódio piloto do Mente e Código. Importantíssimo.", status:"confirmed", location:"Google Meet" },
+    
   ],
 };
 
